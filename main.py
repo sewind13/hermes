@@ -1,5 +1,5 @@
 import asyncio
-from websites.google.scraper import ExampleScraper
+from websites.google.pages import ExampleScraper
 
 async def main():
     scraper = ExampleScraper()

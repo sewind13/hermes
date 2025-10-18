@@ -1,19 +1,15 @@
-from common.browser_manager import BrowserManager
-from common.base_action import BaseAction
+from pages import Browser
+import asyncio
 
-class ExampleScraper:
-    async def run(self):
-        browser = BrowserManager(headless=False)
 
-        async with browser as page:
-            actions = BaseAction(page)
+async def main_scraper():
+    async with Browser(headless=False) as page:
+            
+            await page.open("https://www.google.com")
+            await page.search("Playwright Python async")
+            title = await page.get_title_text()
+            print("Page Title:", title)
 
-            success = await browser.safe_goto("https://google.com")
-            if not success:
-                return
 
-            await actions.wait_for_selector("h1")
-            title = await page.text_content("h1")
-            print("Title:", title)
-
-            await actions.scroll_to_bottom()
+if __name__ == "__main__":
+    asyncio.run(main_scraper())
