@@ -61,6 +61,7 @@ class BrowserManager:
                 "--start-maximized",
             ],
         }
+        
         if self.proxy:
             launch_args["proxy"] = self.proxy
 
@@ -88,7 +89,7 @@ class BrowserManager:
         await self.page.add_init_script(
             """
             Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-            Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3] });
+            Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
             Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
             const originalQuery = window.navigator.permissions.query;
             window.navigator.permissions.query = (parameters) =>
