@@ -1,6 +1,0 @@
-2025/10/22-22:25:27.429 5daf8f Reusing MANIFEST /Users/bh1/Documents/git/hermes/user_data/x/Default/Local Storage/leveldb/MANIFEST-000001
-2025/10/22-22:25:27.431 5daf8f Recovering log #3
-2025/10/22-22:25:27.431 5daf8f Reusing old log /Users/bh1/Documents/git/hermes/user_data/x/Default/Local Storage/leveldb/000003.log 
-2025/10/22-22:26:27.435 5daf93 Level-0 table #5: started
-2025/10/22-22:26:27.439 5daf93 Level-0 table #5: 10745 bytes OK
-2025/10/22-22:26:27.442 5daf93 Delete type=0 #3
