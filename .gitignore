@@ -43,3 +43,6 @@ htmlcov/
 # macOS / Windows system files
 .DS_Store
 Thumbs.db
+
+# user_data
+user_data/
