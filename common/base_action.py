@@ -4,12 +4,11 @@ import time
 from playwright.async_api import Locator, Page
 
 
-
 class BaseAction:
     def __init__(self, page):
         self.page = page
 
-    async def __execture_script(self, script: str):
+    async def __execute_script(self, script: str):
         result = await self.page.evaluate(script)
         return result
     

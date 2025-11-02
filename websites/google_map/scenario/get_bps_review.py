@@ -19,9 +19,11 @@ class LoginX:
 
             home_page = HomePage(browser, page)
             await home_page.open_bps_location_page()
-            await home_page.click_about_button()
-            await home_page.move_mouse_to_total_score_panel()
-            await home_page.random_scroll()
+            await home_page.click_consent_button()
+            await home_page.click_review_button()
+            await home_page.wait(2)
+            await home_page.scroll_on_reviews_section()
+            await home_page.get_reviews()
             print("Opened BPS location page on Google Maps successfully.")
 
 if __name__ == "__main__":
